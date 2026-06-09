@@ -130,8 +130,8 @@ body {
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    padding: 10px 10px 120px 10px;
+    gap: 3px;
+    padding: 3px 3px 120px 3px;
     flex-grow: 1;
     align-content: start;
     background-color: #000000;
