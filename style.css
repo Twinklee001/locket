@@ -1174,7 +1174,6 @@ input:checked + .slider-round:before {
 /* Cake Modal */
 .cake-modal {
     background: radial-gradient(circle, #1a1a2e 0%, #050510 100%);
-    position: relative;
     overflow: hidden;
 }
 .close-cake-btn {
