@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     let messages = [];
     let birthdayDate = null;
     let chatMessages = [
-        "Vào 08/06, một em bé siêu đáng yêu đột ngột bước sang tuổi mới 🎁💖",
+        "Vào 12/06, một em bé siêu đáng yêu đột ngột bước sang tuổi mới 🎁💖",
         "Và em bé đó hiện đang là người yêu anh ☺️",
         "Chúc mừng sinh nhật em nhaaaa 🎂",
         "Mong em luôn xinh, luôn vui, luôn ngủ đủ giấc",
