@@ -161,9 +161,9 @@ body {
 /* Floating Navigation Bar */
 .tab-bar-floating {
     position: sticky;
-    bottom: 16px;
+    bottom: 30px;
     width: 260px;
-    margin: 0 auto 16px auto;
+    margin: 0 auto 30px auto;
     background: rgba(15, 15, 15, 0.6);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
