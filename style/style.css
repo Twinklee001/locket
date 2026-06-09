@@ -195,27 +195,42 @@ body {
     height: auto;
 }
 .shutter-inner {
-    width: 72px;
-    height: 72px;
+    width: 76px;
+    height: 76px;
     border-radius: 50%;
-    background-color: #fecb2f;
-    border: 5px solid #fecb2f;
+    background-color: transparent;
+    border: 6px solid #fecb2f;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    box-shadow: 0 4px 15px rgba(254, 203, 47, 0.4);
+    box-shadow: 0 4px 15px rgba(254, 203, 47, 0.3);
     transition: transform 0.1s;
 }
 .shutter-inner i {
-    font-size: 48px;
-    color: #000000;
+    font-size: 50px;
+    color: #ffffff;
 }
 .shutter-inner:hover {
-    box-shadow: 0 6px 20px rgba(254, 203, 47, 0.6);
+    box-shadow: 0 6px 20px rgba(254, 203, 47, 0.5);
 }
 .shutter-inner:active {
     transform: scale(0.92);
+}
+.tab-item.history {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 14px;
+    color: #a0a0a2;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s, color 0.2s;
+}
+.tab-item.history:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
 }
 .tab-item.chat {
     position: relative;
