@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         { 
             title: "Ai Ngoài Anh 💖", 
             src: "style/sound/VSTRA - Ai Ngoài Anh (Official Audio) [cthtCRmTcgA] (mp3cut.net).mp3", 
-            img: "style/img/Avatar.jpg" 
+            img: "style/img/image.png" 
         },
         { 
             title: "Đây Là Bài Hát Sinh Nhật 🎂", 
@@ -132,26 +132,16 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     const images = [
-        "style/img/Anh (1).jpg",
-        "style/img/Anh (2).jpg",
-        "style/img/Anh (3).jpg",
-        "style/img/Anh (4).jpg",
-        "style/img/Anh (5).jpg",
-        "style/img/Anh (6).jpg",
-        "style/img/Anh (7).jpg",
-        "style/img/Anh (8).jpg",
-        "style/img/Anh (9).jpg",
-        "style/img/Anh (10).jpg",
-        "style/img/Anh (11).jpg",
-        "style/img/Anh (12).jpg",
-        "style/img/Anh (13).jpg",
-        "style/img/Anh (14).jpg",
-        "style/img/Anh (15).jpg",
-        "style/img/Anh (16).jpg",
-        "style/img/Anh (17).jpg",
-        "style/img/Anh (18).jpg",
-        "style/img/Anh (19).jpg",
-        "style/img/Anh (20).jpg"
+        "style/img/image.png",
+        "style/img/z7919142221297_0db8588409a77673c640c35887dbbdb5.jpg",
+        "style/img/z7919142222110_0aac68ccfcebb88a0ec30fe47cd86a94.jpg",
+        "style/img/z7919142223486_220c06adb2dca3a542258e8d71bf4310.jpg",
+        "style/img/z7919142223931_432b6639a27e3c8ae373dba9fc58b8e6.jpg",
+        "style/img/z7919142224139_ae6ca736a323f1e32665313784b13678.jpg",
+        "style/img/z7919142224673_234f5026431eca40ff594af03ac67d3d.jpg",
+        "style/img/z7919142224917_b063b715ff002d52a65e0dc17da58837.jpg",
+        "style/img/z7919142225710_9efed27a4d2ba5bde2b5b0f43727bf9f.jpg",
+        "style/img/z7919142226318_0af59c770b35f6a72113e49425935c57.jpg"
     ];
 
     let currentIndex = 0;
