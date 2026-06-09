@@ -43,12 +43,16 @@ document.addEventListener('DOMContentLoaded', async () => {
     const durationEl = document.getElementById('duration');
 
     const songs = [
-        { title: "Hoá Ra", src: "style/sound/Hoá Ra.mp3", img: "style/img/Anh (1).jpg" },
-        { title: "Hẹn Gặp Em Dưới Ánh Trăng", src: "style/sound/Hẹn Gặp Em Dưới Ánh Trăng.mp3", img: "style/img/Anh (2).jpg" },
-        { title: "In Love X Có Đôi Điều", src: "style/sound/In Love X Có Đôi Điều.mp3", img: "style/img/Anh (3).jpg" },
-        { title: "Yêu Em Như...", src: "style/sound/Yêu Em Như....mp3", img: "style/img/Anh (4).jpg" },
-        { title: "Hoa sữa", src: "style/sound/Hoa sữa.mp3", img: "style/img/Anh (5).jpg" },
-        { title: "Track 06 x Nơi Này Có Anh", src: "style/sound/Track 06 x Nơi Này Có Anh.mp3", img: "style/img/Anh (6).jpg" }
+        { 
+            title: "Ai Ngoài Anh 💖", 
+            src: "style/sound/VSTRA - Ai Ngoài Anh (Official Audio) [cthtCRmTcgA] (mp3cut.net).mp3", 
+            img: "style/img/Avatar.jpg" 
+        },
+        { 
+            title: "Đây Là Bài Hát Sinh Nhật 🎂", 
+            src: "style/sound/ĐÂY LÀ BÀI HÁT SINH NHẬT (Lyric Video) _ Bùi Công Nam x Cái Lò Nướng x Fillinus [2-V3-WM-T-Y] (mp3cut.net).mp3", 
+            img: "style/img/happy_birthday_cover.png" 
+        }
     ];
 
     let songIndex = 0;
@@ -713,6 +717,20 @@ document.addEventListener('DOMContentLoaded', async () => {
             }, 800);
         });
     }
+
+    // Fallback: Tự động phát khi tương tác lần đầu (nếu trang chào mừng bị tắt)
+    const playOnFirstInteraction = () => {
+        if (!audio.src) {
+            loadSong(songs[songIndex]);
+        }
+        if (!isPlaying) {
+            playSong();
+        }
+        document.removeEventListener('click', playOnFirstInteraction);
+        document.removeEventListener('touchstart', playOnFirstInteraction);
+    };
+    document.addEventListener('click', playOnFirstInteraction);
+    document.addEventListener('touchstart', playOnFirstInteraction);
 
     const openMusic = () => {
         musicModal.style.display = 'flex';
