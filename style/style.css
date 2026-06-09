@@ -130,15 +130,15 @@ body {
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
-    padding: 0 0 120px 0;
+    gap: 10px;
+    padding: 10px 10px 120px 10px;
     flex-grow: 1;
     align-content: start;
-    background-color: #1a1a1a;
+    background-color: #000000;
 }
 .gallery-item {
     aspect-ratio: 1 / 1;
-    border-radius: 10px;
+    border-radius: 24px;
     overflow: hidden;
     background-color: #1c1c1e;
     cursor: pointer;
