@@ -130,13 +130,13 @@ body {
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 3px;
-    padding: 4px 3px 120px 3px;
+    gap: 2px;
+    padding: 2px 2px 120px 2px;
     flex-grow: 1;
 }
 .gallery-item {
     aspect-ratio: 1 / 1;
-    border-radius: 14px;
+    border-radius: 4px;
     overflow: hidden;
     background-color: #1c1c1e;
     cursor: pointer;
@@ -149,7 +149,7 @@ body {
     transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .gallery-item:hover img {
-    transform: scale(1.08);
+    transform: scale(1.05);
 }
 .gallery-item:active img {
     transform: scale(0.98);
