@@ -43,12 +43,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     const durationEl = document.getElementById('duration');
 
     const songs = [
-        { title: "Hoá Ra", src: "style/sound/Hoá Ra.mp3", img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&q=80" },
-        { title: "Hẹn Gặp Em Dưới Ánh Trăng", src: "style/sound/Hẹn Gặp Em Dưới Ánh Trăng.mp3", img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" },
-        { title: "In Love X Có Đôi Điều", src: "style/sound/In Love X Có Đôi Điều.mp3", img: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80" },
-        { title: "Yêu Em Như...", src: "style/sound/Yêu Em Như....mp3", img: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=80" },
-        { title: "Hoa sữa", src: "style/sound/Hoa sữa.mp3", img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80" },
-        { title: "Track 06 x Nơi Này Có Anh", src: "style/sound/Track 06 x Nơi Này Có Anh.mp3", img: "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=400&q=80" }
+        { title: "Hoá Ra", src: "style/sound/Hoá Ra.mp3", img: "style/img/Anh (1).jpg" },
+        { title: "Hẹn Gặp Em Dưới Ánh Trăng", src: "style/sound/Hẹn Gặp Em Dưới Ánh Trăng.mp3", img: "style/img/Anh (2).jpg" },
+        { title: "In Love X Có Đôi Điều", src: "style/sound/In Love X Có Đôi Điều.mp3", img: "style/img/Anh (3).jpg" },
+        { title: "Yêu Em Như...", src: "style/sound/Yêu Em Như....mp3", img: "style/img/Anh (4).jpg" },
+        { title: "Hoa sữa", src: "style/sound/Hoa sữa.mp3", img: "style/img/Anh (5).jpg" },
+        { title: "Track 06 x Nơi Này Có Anh", src: "style/sound/Track 06 x Nơi Này Có Anh.mp3", img: "style/img/Anh (6).jpg" }
     ];
 
     let songIndex = 0;
@@ -128,27 +128,26 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     const images = [
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&q=80",
-        "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80",
-        "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80",
-        "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=80",
-        "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80",
-        "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=400&q=80",
-        "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=400&q=80",
-        "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=400&q=80",
-        "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80",
-        "https://images.unsplash.com/photo-1554151228-14d9def656e4?auto=format&fit=crop&w=400&q=80",
-        "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=400&q=80",
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=400&q=80",
-        "https://images.unsplash.com/photo-1548142813-c348350df52b?auto=format&fit=crop&w=400&q=80",
-        "https://images.unsplash.com/photo-1502685104226-ee32379fefbe?auto=format&fit=crop&w=400&q=80",
-        "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=400&q=80",
-        "https://images.unsplash.com/photo-1526511589887-a219f223e41b?auto=format&fit=crop&w=400&q=80",
-        "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=400&q=80",
-        "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80",
-        "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=400&q=80",
-        "https://images.unsplash.com/photo-1513956589380-bad6acb9b9d4?auto=format&fit=crop&w=400&q=80",
-        "https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?auto=format&fit=crop&w=400&q=80"
+        "style/img/Anh (1).jpg",
+        "style/img/Anh (2).jpg",
+        "style/img/Anh (3).jpg",
+        "style/img/Anh (4).jpg",
+        "style/img/Anh (5).jpg",
+        "style/img/Anh (6).jpg",
+        "style/img/Anh (7).jpg",
+        "style/img/Anh (8).jpg",
+        "style/img/Anh (9).jpg",
+        "style/img/Anh (10).jpg",
+        "style/img/Anh (11).jpg",
+        "style/img/Anh (12).jpg",
+        "style/img/Anh (13).jpg",
+        "style/img/Anh (14).jpg",
+        "style/img/Anh (15).jpg",
+        "style/img/Anh (16).jpg",
+        "style/img/Anh (17).jpg",
+        "style/img/Anh (18).jpg",
+        "style/img/Anh (19).jpg",
+        "style/img/Anh (20).jpg"
     ];
 
     let currentIndex = 0;
@@ -845,7 +844,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             typing.className = 'message-wrapper received';
             typing.innerHTML = `
                 <div class="message-avatar-tiny">
-                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&q=80" alt="Avatar">
+                    <img src="style/img/Avatar.jpg" alt="Avatar">
                 </div>
                 <div class="typing-indicator">
                     <div class="typing-dot"></div>
@@ -866,7 +865,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             wrapper.className = 'message-wrapper received';
             wrapper.innerHTML = `
                 <div class="message-avatar-tiny">
-                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&q=80" alt="Avatar">
+                    <img src="style/img/Avatar.jpg" alt="Avatar">
                 </div>
                 <div class="message-bubble received">${msg}</div>
             `;
