@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Pacifico&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -1493,19 +1495,17 @@ input:checked + .slider-round:before {
 .text-bubble {
     position: absolute;
     bottom: -100px;
-    padding: 10px 20px;
-    background: linear-gradient(135deg, #fecb2f, #ffde6a);
-    color: #000000;
-    font-weight: 700;
-    font-size: 16px;
-    border-radius: 30px;
-    border: 2px solid #ffffff;
-    box-shadow: 0 8px 25px rgba(254, 203, 47, 0.4);
+    padding: 0;
+    background: none;
+    border: none;
+    box-shadow: none;
+    font-size: 36px;
+    font-weight: normal;
     white-space: nowrap;
     z-index: 9;
     pointer-events: none;
     animation: floatUpText var(--duration) ease-in-out forwards;
-    font-family: 'Be Vietnam Pro', sans-serif;
+    font-family: 'Pacifico', 'Dancing Script', cursive;
 }
 @keyframes floatUpText {
     0% { transform: translateY(0) scale(0.8) rotate(-5deg); opacity: 0; }

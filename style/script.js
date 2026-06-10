@@ -435,16 +435,22 @@ document.addEventListener('DOMContentLoaded', async () => {
         }, 300);
 
         // Text bubble sequence loop
-        const textSequence = ["chúc mừng 🥳", "xinh nhật 🎂", "iu nhé 💛"];
+        const textSequence = [
+            { text: "chúc mừng 🥳", color: "#fecb2f", shadow: "rgba(254, 203, 47, 0.8)" },
+            { text: "xinh nhật 🎂", color: "#ff65a3", shadow: "rgba(255, 101, 163, 0.8)" },
+            { text: "iu nhé 💛", color: "#ff9f43", shadow: "rgba(255, 159, 67, 0.8)" }
+        ];
         let seqIndex = 0;
 
         const spawnNextText = () => {
-            const text = textSequence[seqIndex];
+            const item = textSequence[seqIndex];
             seqIndex = (seqIndex + 1) % textSequence.length;
 
             const bubble = document.createElement('div');
             bubble.className = 'text-bubble';
-            bubble.innerText = text;
+            bubble.innerText = item.text;
+            bubble.style.color = item.color;
+            bubble.style.textShadow = `0 4px 15px ${item.shadow}, 0 2px 4px rgba(0, 0, 0, 0.8)`;
             bubble.style.left = `${Math.random() * 60 + 20}%`;
             bubble.style.setProperty('--duration', `${Math.random() * 3 + 4}s`);
             cakeModal.appendChild(bubble);
