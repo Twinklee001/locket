@@ -1488,3 +1488,29 @@ input:checked + .slider-round:before {
     0% { transform: translateY(0) rotate(0deg); opacity: 1; }
     100% { transform: translateY(105vh) rotate(360deg); opacity: 0; }
 }
+
+/* Text Bubbles */
+.text-bubble {
+    position: absolute;
+    bottom: -100px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #fecb2f, #ffde6a);
+    color: #000000;
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 30px;
+    border: 2px solid #ffffff;
+    box-shadow: 0 8px 25px rgba(254, 203, 47, 0.4);
+    white-space: nowrap;
+    z-index: 9;
+    pointer-events: none;
+    animation: floatUpText var(--duration) ease-in-out forwards;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+@keyframes floatUpText {
+    0% { transform: translateY(0) scale(0.8) rotate(-5deg); opacity: 0; }
+    10% { opacity: 1; }
+    50% { transform: translateY(-50vh) scale(1.1) rotate(5deg); }
+    90% { opacity: 1; }
+    100% { transform: translateY(-120vh) scale(0.9) rotate(-3deg); opacity: 0; }
+}

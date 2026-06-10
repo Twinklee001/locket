@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     let birthdayDate = null;
     let chatMessages = [
         "12/06, một em bé siêu đáng yêu đột ngột bước sang tuổi 18 rực rỡ 🎁💖",
-        "Và em ấy hiện đang là người anh đơn phương ☺️",
+        "Và em ấy hiện đang là người anh đang theo đuổi ☺️",
         "Chúc mừng sinh nhật em nhaaaa 🎂",
         "Mong em luôn xinh, luôn vui, luôn ngủ đủ giấc",
         "Và bớt vô tư lại 🥺",
@@ -413,9 +413,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     let bubbleInterval = null;
+    let textBubbleInterval = null;
 
     const startPhotoBubbles = () => {
         if (bubbleInterval) clearInterval(bubbleInterval);
+        if (textBubbleInterval) clearInterval(textBubbleInterval);
+
+        // Photo bubble loop
         bubbleInterval = setInterval(() => {
             const bubble = document.createElement('div');
             bubble.className = 'photo-bubble';
@@ -429,6 +433,28 @@ document.addEventListener('DOMContentLoaded', async () => {
             cakeModal.appendChild(bubble);
             setTimeout(() => bubble.remove(), 8000);
         }, 300);
+
+        // Text bubble sequence loop
+        const textSequence = ["chúc mừng 🥳", "xinh nhật 🎂", "iu nhé 💛"];
+        let seqIndex = 0;
+
+        const spawnNextText = () => {
+            const text = textSequence[seqIndex];
+            seqIndex = (seqIndex + 1) % textSequence.length;
+
+            const bubble = document.createElement('div');
+            bubble.className = 'text-bubble';
+            bubble.innerText = text;
+            bubble.style.left = `${Math.random() * 60 + 20}%`;
+            bubble.style.setProperty('--duration', `${Math.random() * 3 + 4}s`);
+            cakeModal.appendChild(bubble);
+            setTimeout(() => bubble.remove(), 8000);
+        };
+
+        // Start immediately
+        spawnNextText();
+        // Spawn subsequent ones every 1.2 seconds
+        textBubbleInterval = setInterval(spawnNextText, 1200);
     };
 
     cakePivot.ondblclick = () => {
@@ -453,8 +479,9 @@ document.addEventListener('DOMContentLoaded', async () => {
             cakeModal.style.display = 'none';
             document.body.style.overflow = 'hidden';
             if (bubbleInterval) clearInterval(bubbleInterval);
+            if (textBubbleInterval) clearInterval(textBubbleInterval);
             if (fireworkInterval) clearInterval(fireworkInterval);
-            document.querySelectorAll('.photo-bubble, .firework, .firework-particle').forEach(b => b.remove());
+            document.querySelectorAll('.photo-bubble, .text-bubble, .firework, .firework-particle').forEach(b => b.remove());
         };
     }
     program();
