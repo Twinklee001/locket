@@ -64,19 +64,18 @@ document.addEventListener('DOMContentLoaded', async () => {
     let messages = [];
     let birthdayDate = null;
     let chatMessages = [
-        "Vào 12/06, một em bé siêu đáng yêu đột ngột bước sang tuổi mới 🎁💖",
-        "Và em bé đó hiện đang là người yêu anh ☺️",
+        "12/06, một em bé siêu đáng yêu đột ngột bước sang tuổi 18 rực rỡ 🎁💖",
+        "Và em ấy hiện đang là người anh đơn phương ☺️",
         "Chúc mừng sinh nhật em nhaaaa 🎂",
         "Mong em luôn xinh, luôn vui, luôn ngủ đủ giấc",
-        "Và bớt giận anh lại 🥺",
+        "Và bớt vô tư lại 🥺",
         "Anh biết đôi lúc anh hơi khờ...hơi nhây...hơi phiền",
         "Nhưng mà...",
-        "vẫn yêu anh nha 😭🙏",
-        "cảm ơn em vì đã ở đây",
-        "Ở cạnh anh, chịu đựng anh và thương anh nữa",
+        "Vẫn bỏ qua cho anh nha 😭🙏",
+        "Cảm ơn em vì đã ở đây",
         "Nói chung là...",
         "Anh mê em dữ lắm 😭💖",
-        "Happy Birthday người anh thươnggg 🫶"
+        "Happy Birthday người anh iuu 🫶"
     ];
     let hasLoadedChat = false;
 
