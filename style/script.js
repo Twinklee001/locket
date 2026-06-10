@@ -457,7 +457,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (closeCakeBtn) {
         closeCakeBtn.onclick = () => {
             cakeModal.style.display = 'none';
-            document.body.style.overflow = 'auto';
+            document.body.style.overflow = 'hidden';
             if (bubbleInterval) clearInterval(bubbleInterval);
             if (fireworkInterval) clearInterval(fireworkInterval);
             document.querySelectorAll('.photo-bubble, .firework, .firework-particle').forEach(b => b.remove());
@@ -604,7 +604,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         dots.forEach((dot, i) => dot.className = i === activeIndex ? 'dot active' : 'dot');
     };
 
-    const closePreview = () => { modal.style.display = 'none'; document.body.style.overflow = 'auto'; autoPlayToggle.checked = false; stopAutoPlay(); };
+    const closePreview = () => { modal.style.display = 'none'; document.body.style.overflow = 'hidden'; autoPlayToggle.checked = false; stopAutoPlay(); };
     const closeBtn = document.querySelector('.close-preview-btn'); if (closeBtn) closeBtn.onclick = closePreview;
 
     // Music Player Logic
@@ -743,7 +743,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const closeMusic = () => {
         musicModal.style.display = 'none';
-        document.body.style.overflow = 'auto';
+        document.body.style.overflow = 'hidden';
     };
 
     if (profileBtn) profileBtn.onclick = openMusic;
@@ -836,7 +836,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const closeCalendar = () => {
         calendarModal.style.display = 'none';
-        document.body.style.overflow = 'auto';
+        document.body.style.overflow = 'hidden';
     };
 
     if (calendarBtn) calendarBtn.onclick = openCalendar;
@@ -921,7 +921,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const closeChat = () => {
         chatListModal.style.display = 'none';
         chatDetailModal.style.display = 'none';
-        document.body.style.overflow = 'auto';
+        document.body.style.overflow = 'hidden';
     };
 
     if (chatBtn) chatBtn.onclick = openChatList;
