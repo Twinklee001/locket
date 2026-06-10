@@ -850,6 +850,16 @@ input:checked + .slider-round:before {
     font-weight: 700;
     color: #ffffff;
 }
+.calendar-header-left {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.calendar-subtitle {
+    font-size: 13px;
+    font-weight: 400;
+    color: #a0a0a2;
+}
 .close-calendar-btn {
     background: none;
     border: none;
