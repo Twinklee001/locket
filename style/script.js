@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const text = await response.text();
         messages = text.split('\n').map(m => m.trim()).filter(m => m.length > 0);
     } catch (error) {
-        messages = ["madiu 💛"];
+        messages = ["madiu"];
     }
 
     const images = [
@@ -165,14 +165,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     const initSlider = () => {
         modalSlider.innerHTML = '';
         paginationDots.innerHTML = '';
-        let recentMessages = [];
         images.forEach((src, index) => {
-            let randomMsg;
-            do {
-                randomMsg = messages[Math.floor(Math.random() * messages.length)];
-            } while (recentMessages.includes(randomMsg) && messages.length > 3);
-            recentMessages.push(randomMsg);
-            if (recentMessages.length > 2) recentMessages.shift();
+            const msg = messages.length > 0 ? messages[index % messages.length] : "madiu";
 
             const sliderItem = document.createElement('div');
             sliderItem.className = 'slider-item';
@@ -180,7 +174,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 <div class="img-wrapper">
                     <img src="${src}" class="modal-content">
                     <div class="message-overlay">
-                        <span>${randomMsg}</span>
+                        <span>${msg}</span>
                     </div>
                 </div>
             `;
