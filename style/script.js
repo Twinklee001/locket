@@ -125,10 +125,11 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     try {
         const response = await fetch('style/message.txt');
+        if (!response.ok) throw new Error("message.txt not found");
         const text = await response.text();
         messages = text.split('\n').map(m => m.trim()).filter(m => m.length > 0);
     } catch (error) {
-        messages = ["Heart ❤️", "Sweet ✨", "Locket 📸"];
+        messages = ["madiu 💛"];
     }
 
     const images = [
