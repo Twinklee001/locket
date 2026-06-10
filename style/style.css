@@ -42,22 +42,40 @@ body {
     background-color: transparent;
 }
 @media (max-width: 1024px) {
+    html, body {
+        height: 100% !important;
+        height: -webkit-fill-available !important;
+        overscroll-behavior: none !important;
+    }
     body {
-        display: block;
-        min-height: 100vh;
-        min-height: 100dvh;
-        overflow: hidden;
+        display: block !important;
+        min-height: 100% !important;
+        min-height: -webkit-fill-available !important;
+        overflow: hidden !important;
+        background-color: #000000 !important;
+        overscroll-behavior: none !important;
     }
     .app-container {
-        width: 100%;
-        max-width: 100%;
-        height: 100vh;
-        height: 100dvh;
-        max-height: 100vh;
-        max-height: 100dvh;
-        border-radius: 0;
-        box-shadow: none;
-        margin: 0;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 100% !important;
+        height: -webkit-fill-available !important;
+        max-height: none !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        margin: 0 !important;
+        overflow-y: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        overscroll-behavior: none !important;
+    }
+    .tab-bar-floating {
+        position: sticky !important;
+        bottom: calc(20px + env(safe-area-inset-bottom, 0px)) !important;
+        margin: 0 auto calc(20px + env(safe-area-inset-bottom, 0px)) auto !important;
+    }
+    .gallery-grid {
+        padding-top: calc(90px + env(safe-area-inset-top, 0px)) !important;
+        padding-bottom: calc(100px + env(safe-area-inset-bottom, 0px)) !important;
     }
 }
 
