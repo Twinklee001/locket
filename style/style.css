@@ -58,6 +58,14 @@ body {
         box-shadow: none;
         margin: 0;
     }
+    .tab-bar-floating {
+        bottom: calc(10px + env(safe-area-inset-bottom, 0px)) !important;
+        margin: 0 auto 15px auto !important;
+    }
+    .gallery-grid {
+        padding-top: calc(85px + env(safe-area-inset-top, 0px)) !important;
+        padding-bottom: calc(90px + env(safe-area-inset-bottom, 0px)) !important;
+    }
 }
 
 .app-header {
