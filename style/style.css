@@ -856,7 +856,7 @@ input:checked + .slider-round:before {
     gap: 4px;
 }
 .calendar-subtitle {
-    font-size: 13px;
+    font-size: 20px;
     font-weight: 400;
     color: #a0a0a2;
 }
