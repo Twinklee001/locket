@@ -132,7 +132,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     const images = [
-        "style/img/image.png",
         "style/img/z7919142221297_0db8588409a77673c640c35887dbbdb5.jpg",
         "style/img/z7919142222110_0aac68ccfcebb88a0ec30fe47cd86a94.jpg",
         "style/img/z7919142223486_220c06adb2dca3a542258e8d71bf4310.jpg",
