@@ -140,7 +140,18 @@ document.addEventListener('DOMContentLoaded', async () => {
         "style/img/z7919142224673_234f5026431eca40ff594af03ac67d3d.jpg",
         "style/img/z7919142224917_b063b715ff002d52a65e0dc17da58837.jpg",
         "style/img/z7919142225710_9efed27a4d2ba5bde2b5b0f43727bf9f.jpg",
-        "style/img/z7919142226318_0af59c770b35f6a72113e49425935c57.jpg"
+        "style/img/z7919142226318_0af59c770b35f6a72113e49425935c57.jpg",
+        "style/img/z7920090953463_82134df1e4d7e81173e96b5c21d788b2.jpg",
+        "style/img/z7920090955010_76176d21e1c4751d78707864fb264310.jpg",
+        "style/img/z7920090963121_5d6a621e69ac8580532e54bba1fbe21e.jpg",
+        "style/img/z7920090970439_543ac54ffecabb02cf2d9afb2f6ee145.jpg",
+        "style/img/z7920090981797_c0bc0a672ef5be80b2d57ae1aeec89c1.jpg",
+        "style/img/z7920090992757_b39119f2850b8e5b96839a5e104438b6.jpg",
+        "style/img/z7920090994137_83720f20ca8af5f7b36b0f2b0b496f1b.jpg",
+        "style/img/z7920091008545_a36c288e7a83ade60d4c040d81a26ee5.jpg",
+        "style/img/z7920091013992_c74648e768d1f9c2002e07fb96ba2429.jpg",
+        "style/img/z7920091017957_372c6634fadec89115b4fd26d8443d8b.jpg",
+        "style/img/z7920091027521_cc1c71d19640e1d954ef4ab837cc01c2.jpg"
     ];
 
     let currentIndex = 0;
