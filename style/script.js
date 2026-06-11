@@ -593,9 +593,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     autoPlayToggle.addEventListener('change', (e) => e.target.checked ? startAutoPlay() : stopAutoPlay());
 
     let fillInterval, fillPercentage = 0;
+    let pressStartTime = 0;
     const startFilling = () => {
         if (fillInterval) return;
         fillPercentage = 0;
+        pressStartTime = Date.now();
         fillInterval = setInterval(() => {
             fillPercentage += 2;
             const fillElement = sendBtn.querySelector('.fill-progress') || document.createElement('div');
@@ -609,7 +611,39 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (fillPercentage >= 100) { clearInterval(fillInterval); triggerEmojiRain(); resetFill(); }
         }, 20);
     };
-    const stopFilling = () => { clearInterval(fillInterval); fillInterval = null; resetFill(); };
+    const spawnHeart = () => {
+        const rect = modal.getBoundingClientRect();
+        const btnRect = sendBtn.getBoundingClientRect();
+        
+        const x = btnRect.left - rect.left + btnRect.width / 2;
+        const y = btnRect.top - rect.top + btnRect.height / 2;
+        
+        const heart = document.createElement('div');
+        heart.className = 'floating-heart';
+        heart.innerText = '❤️';
+        
+        const randomAngle = (Math.random() * 40 - 20); // -20deg to 20deg
+        const randomDriftX = (Math.random() * 80 - 40); // -40px to 40px
+        
+        heart.style.setProperty('--rotate-angle', `${randomAngle}deg`);
+        heart.style.setProperty('--drift-x', `${randomDriftX}px`);
+        heart.style.left = `${x}px`;
+        heart.style.top = `${y}px`;
+        
+        modal.appendChild(heart);
+        setTimeout(() => heart.remove(), 1500);
+    };
+    const stopFilling = (e) => {
+        clearInterval(fillInterval);
+        fillInterval = null;
+        
+        const pressDuration = Date.now() - pressStartTime;
+        if (pressDuration > 0 && pressDuration < 350 && e && e.type !== 'mouseleave') {
+            spawnHeart();
+        }
+        
+        resetFill();
+    };
     const resetFill = () => { fillPercentage = 0; const fillElement = sendBtn.querySelector('.fill-progress'); if (fillElement) fillElement.style.height = '0%'; };
     const triggerEmojiRain = () => {
         const overlay = document.getElementById('emoji-overlay');

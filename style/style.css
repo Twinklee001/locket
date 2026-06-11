@@ -1615,3 +1615,27 @@ input:checked + .slider-round:before {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-8px); }
 }
+
+/* Floating Heart Reaction */
+.floating-heart {
+    position: absolute;
+    pointer-events: none;
+    font-size: 32px;
+    z-index: 1005;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+    animation: floatHeart 1.5s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
+}
+@keyframes floatHeart {
+    0% {
+        transform: translate(-50%, -50%) scale(0.3) translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    12% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.2) translateY(-20px) rotate(var(--rotate-angle, 0deg));
+    }
+    100% {
+        transform: translate(calc(-50% + var(--drift-x, 0px)), -50%) scale(1) translateY(-250px) rotate(calc(var(--rotate-angle, 0deg) * 1.5));
+        opacity: 0;
+    }
+}
