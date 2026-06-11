@@ -504,6 +504,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (megaphoneBtn && infoModal) {
         megaphoneBtn.onclick = () => {
             infoModal.classList.add('show');
+            const dot = megaphoneBtn.querySelector('.notification-dot');
+            if (dot) {
+                dot.style.display = 'none';
+            }
         };
     }
 
