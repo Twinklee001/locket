@@ -29,6 +29,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     const chatMessagesContainer = document.getElementById('chatMessages');
     const deviceWrapper = document.querySelector('.device-wrapper') || document.body;
     const welcomeScreen = document.getElementById('welcome-screen');
+    const megaphoneBtn = document.getElementById('megaphoneBtn');
+    const infoModal = document.getElementById('infoModal');
+    const infoCloseBtn = document.getElementById('infoCloseBtn');
 
     // Welcome screen handling (MOVED DOWN)
 
@@ -489,6 +492,26 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (fireworkInterval) clearInterval(fireworkInterval);
             document.querySelectorAll('.photo-bubble, .text-bubble, .firework, .firework-particle').forEach(b => b.remove());
         };
+    }
+
+    if (megaphoneBtn && infoModal) {
+        megaphoneBtn.onclick = () => {
+            infoModal.classList.add('show');
+        };
+    }
+
+    if (infoCloseBtn && infoModal) {
+        infoCloseBtn.onclick = () => {
+            infoModal.classList.remove('show');
+        };
+    }
+
+    if (infoModal) {
+        infoModal.addEventListener('click', (e) => {
+            if (e.target === infoModal) {
+                infoModal.classList.remove('show');
+            }
+        });
     }
     program();
 
