@@ -434,7 +434,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             bubble.style.backgroundImage = `url('${img}')`;
             bubble.style.left = `${Math.random() * 100}%`;
             bubble.style.setProperty('--duration', `${Math.random() * 4 + 4}s`);
-            const size = Math.random() * 40 + 40;
+            const size = Math.random() * 50 + 60;
             bubble.style.width = `${size}px`;
             bubble.style.height = `${size}px`;
             cakeModal.appendChild(bubble);
