@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const megaphoneBtn = document.getElementById('megaphoneBtn');
     const infoModal = document.getElementById('infoModal');
     const infoCloseBtn = document.getElementById('infoCloseBtn');
+    const cakeInstructions = document.querySelector('.cake-instructions');
 
     // Welcome screen handling (MOVED DOWN)
 
@@ -409,6 +410,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         shutterBtn.onclick = () => {
             cakeModal.style.display = 'flex';
             document.body.style.overflow = 'hidden';
+            if (cakeInstructions) {
+                cakeInstructions.style.display = 'block';
+            }
             initStars();
             init3DCake();
             startFireworks();
@@ -467,6 +471,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     };
 
     cakePivot.ondblclick = () => {
+        if (cakeInstructions) {
+            cakeInstructions.style.display = 'none';
+        }
         const segments = document.querySelectorAll('.tier-side-segment, .tier-top, .tier-bottom, .candle');
         segments.forEach((el, index) => {
             // Randomly split elements left or right
