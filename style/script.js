@@ -445,7 +445,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const textSequence = [
             { text: "chúc mừng 🥳", color: "#fecb2f", shadow: "rgba(254, 203, 47, 0.8)" },
             { text: "xinh nhật 🎂", color: "#ff65a3", shadow: "rgba(255, 101, 163, 0.8)" },
-            { text: "iu nhé 💖", color: "#ff65a3", shadow: "rgba(255, 101, 163, 0.8)" }
+            { text: "xinh nhất 💖", color: "#ff65a3", shadow: "rgba(255, 101, 163, 0.8)" }
         ];
         let seqIndex = 0;
 
